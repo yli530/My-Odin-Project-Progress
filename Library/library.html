@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <fieldset>
+        <legend>New Book</legend>
+        <label for="bookTitle"> Book Title: </label>
+        <input type="text" id="bookTitle" name="bookTitle">
+        <label for="bookAuthor"> Author: </label>
+        <input type="text" id="bookAuthor" name="bookAuthor">
+        <label for="numPage"> Number of Pages: </label>
+        <input type="number" id="numPage" name="numPage">
+        <input type="submit" value="Submit" onclick="addBookToLibrary()">
+        <input type="submit" value="refresh" onclick="refreshLibrary()">
+    </fieldset>
+    <table class="full-width" id="libraryTable">
+
+    </table>
+	<script src="library.js"></script>
+  </body>
+</html>
