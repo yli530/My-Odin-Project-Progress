@@ -1,11 +1,14 @@
-function Book(tltle, author, pageNum) {
-    this.title = tltle;
-    this.author = author;
-    this.pageNum = pageNum;
-    this.hasRead = false;
-    this.Info = function() {
-        return this.title + " by: " + this.author + ", " + this.pageNum + ", " + ((this.hasRead) ? "already read" : "not read yet");
-    }
-}
-
-let a = new Book("bookName", "book author", 400);
+const counterCreator = () => {
+    let count = 0;
+    return () => {
+      console.log(count);
+      count++;
+    };
+  };
+  
+  const counter = counterCreator();
+  
+  counter(); // 0
+  counter(); // 1
+  counter(); // 2
+  counter(); // 3
