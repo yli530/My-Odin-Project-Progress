@@ -2,15 +2,19 @@ const MyLibrary = {};
 
 let id = 0;
 
-function Book(tltle, author, pageNum) {
-    this.title = tltle;
-    this.author = author;
-    this.pageNum = pageNum;
-    this.hasRead = false;
-    this.info = function() {
+class Book {
+    constructor(title, author, pageNum) {
+        this.title = title;
+        this.author = author;
+        this.pageNum = pageNum;
+        this.hasRead = false;
+    }
+
+    info() {
         return this.title + " by: " + this.author + ", " + this.pageNum + ", " + ((this.hasRead) ? "already read" : "not read yet");
     }
-    this.updateRead = function() {
+
+    updateRead() {
         this.hasRead = !this.hasRead;
     }
 }
