@@ -10,6 +10,18 @@ class Book {
         this.hasRead = false;
     }
 
+    get title() {
+        return this.title;
+    }
+
+    get author() {
+        return this.author;
+    }
+
+    get pageNum() {
+        return this.pageNum;
+    }
+
     info() {
         return this.title + " by: " + this.author + ", " + this.pageNum + ", " + ((this.hasRead) ? "already read" : "not read yet");
     }
